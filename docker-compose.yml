@@ -1,0 +1,47 @@
+# Zander Rommelaere
+# gbd016 / 11313930
+# CMPT353 Fall 2023
+
+version: "3.9"
+services:
+  node-back:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: node-back
+    ports:
+      - 4000:4000
+    volumes:
+      - ./backend:/opt/app
+    depends_on:
+      postgresql:
+        condition: service_started
+    stdin_open: true
+    tty: true
+
+  node-front:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+    container_name: node-front
+    ports:
+      - 3000:3000
+    volumes:
+      - ./frontend:/opt/app
+    depends_on:
+      postgresql:
+        condition: service_started
+      node-back:
+        condition: service_started
+    stdin_open: true
+    tty: true
+
+  postgresql:
+    image: postgres:16
+    container_name: postgresql
+    volumes:
+      - ./backend/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=domain-root-site
