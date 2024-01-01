@@ -1,7 +1,3 @@
-# Zander Rommelaere
-# gbd016 / 11313930
-# CMPT353 Fall 2023
-
 version: "3.9"
 services:
   node-back:
@@ -13,6 +9,11 @@ services:
       - 4000:4000
     volumes:
       - ./backend:/opt/app
+    environment:
+      - PGUSER=root
+      - PGPASSWORD=root
+      - PGHOST=postgresql
+      - PGDATABASE=domain-root-site
     depends_on:
       postgresql:
         condition: service_started
