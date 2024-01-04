@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import "./Home.css";
 
 function Home() {
   const [count, setCount] = useState({
@@ -25,7 +24,6 @@ function Home() {
   }
 
   useEffect(() => {
-    console.log("effect");
     fetchData();
   }, []);
 
@@ -40,9 +38,6 @@ function Home() {
           </h5>
         )}
       </div>
-      <footer id="home-footer">
-        <p>🇨🇦❄️</p>
-      </footer>
     </div>
   );
 }
