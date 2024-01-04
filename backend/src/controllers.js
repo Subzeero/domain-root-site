@@ -10,16 +10,16 @@ const count = async (req, resp) => {
     await db.pool.query(`
       UPDATE visits SET count = count + 1
     `);
-    result = await db.pool.query(`SELECT count FROM visits`);
+    result = await db.pool.query(`SELECT * FROM visits`);
   } catch (e) {
     console.error(`Failed to update & select count: ${e?.stack}`);
   } finally {
     if (result.rowCount < 1) {
-      result = 1;
+      result = { since: "0", count: "0" };
     } else {
       result = result.rows[0];
     }
-    resp.json({ count: result });
+    resp.json(JSON.stringify(result));
   }
 };
 
