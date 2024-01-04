@@ -1,0 +1,24 @@
+#home #not-found {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.85);
+  background-color: #252525;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* #home-text {
+  justify-content: center;
+  align-items: center;
+} */
+
+#home-footer {
+  font-weight: 500;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
