@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Footer from "./Footer";
 
-function Home() {
-  const [count, setCount] = useState({
+function Home(): JSX.Element {
+  const [count, setCount] = useState<{ since: string; count: string }>({
     since: "00/00/0000, 00:00:00 AM",
     count: "...",
   });
-  const [loaded, setLoaded] = useState(false);
+  const [loaded, setLoaded] = useState<boolean>(false);
 
-  async function fetchData() {
+  async function fetchData(): Promise<void> {
     if (loaded) return;
     setLoaded(true);
     await axios
@@ -38,6 +39,7 @@ function Home() {
           </h5>
         )}
       </div>
+      <Footer />
     </div>
   );
 }
