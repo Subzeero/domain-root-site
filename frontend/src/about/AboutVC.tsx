@@ -1,11 +1,11 @@
-function AboutContact(): JSX.Element {
+function AboutVC(): JSX.Element {
   return (
     <div className="col pt-4 vh-100">
-      <h3>Contact</h3>
+      <h3>Volunteer Connect</h3>
       <p>My text</p>
       <hr />
     </div>
   );
 }
 
-export default AboutContact;
+export default AboutVC;

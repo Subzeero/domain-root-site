@@ -3,10 +3,12 @@ import axios from "axios";
 
 import Home from "./Home";
 import AboutOutlet from "./about/AboutOutlet";
-import AboutHome from "./about/AboutHome";
 import AboutMe from "./about/AboutMe";
-import AboutProjects from "./about/AboutProjects";
-import AboutContact from "./about/AboutContact";
+import AboutPortfolio from "./about/AboutPortfolio";
+import AboutVC from "./about/AboutVC";
+import AboutSenate from "./about/AboutSenate";
+import AboutHomelab from "./about/AboutHomelab";
+import AboutSChat from "./about/AboutSChat";
 import NotFound404 from "./NotFound404";
 import "./App.css";
 
@@ -18,11 +20,13 @@ function App(): JSX.Element {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route element={<AboutOutlet />}>
-          <Route path="/about" element={<Navigate to={"/about/home"} />} />
-          <Route path="/about/home" element={<AboutHome />} />
+          <Route path="/about" element={<Navigate to={"/about/me"} />} />
           <Route path="/about/me" element={<AboutMe />} />
-          <Route path="/about/projects" element={<AboutProjects />} />
-          <Route path="/about/contact" element={<AboutContact />} />
+          <Route path="/about/portfolio" element={<AboutPortfolio />} />
+          <Route path="/about/volunteer-connect" element={<AboutVC />} />
+          <Route path="/about/the-senate" element={<AboutSenate />} />
+          <Route path="/about/homelab" element={<AboutHomelab />} />
+          <Route path="/about/s-chat" element={<AboutSChat />} />
         </Route>
         <Route path="*" element={<NotFound404 />} />
       </Routes>
