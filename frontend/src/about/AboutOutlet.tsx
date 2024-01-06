@@ -125,7 +125,7 @@ function AboutOutlet(): JSX.Element {
           </div>
         </div>
         <div className="col d-flex flex-column h-sm-100">
-          <main className="row overflow-auto">
+          <main className="row overflow-auto justify-content-center">
             <Outlet />
           </main>
         </div>
