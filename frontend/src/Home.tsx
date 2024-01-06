@@ -31,11 +31,14 @@ function Home(): JSX.Element {
   return (
     <div id="home">
       <div id="home-text">
-        <h2>✅ You have reached subzeero.dev!</h2>
+        <h2>
+          <i className="bi bi-check-circle-fill text-success"></i> You have
+          reached subzeero.dev!
+        </h2>
         {loaded && (
-          <h5>
-            ℹ️ You are visitor #{count.count} since{" "}
-            {new Date(count.since).toLocaleString([])}.
+          <h5 className="text-white text-opacity-75">
+            <i className="bi bi-info-circle-fill"></i> You are visitor #
+            {count.count} since {new Date(count.since).toLocaleString([])}.
           </h5>
         )}
       </div>
