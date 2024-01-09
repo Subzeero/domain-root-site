@@ -7,8 +7,10 @@ services:
     container_name: node-back
     ports:
       - 4000:4000
+    volumes:
+      - ./backend:/opt/mnt
     environment:
-      - CORS_DOMAIN=subzeero.dev
+      - DEV_MODE=true
       - PGUSER=root
       - PGPASSWORD=root
       - PGHOST=postgresql
@@ -16,6 +18,8 @@ services:
     depends_on:
       postgresql:
         condition: service_started
+    stdin_open: true
+    tty: true
 
   node-front:
     build:
@@ -24,13 +28,17 @@ services:
     container_name: node-front
     ports:
       - 3000:3000
+    volumes:
+      - ./frontend:/opt/mnt
     environment:
-      - BACKEND_DOMAIN=subzeero.dev
+      - DEV_MODE=true
     depends_on:
       postgresql:
         condition: service_started
       node-back:
         condition: service_started
+    stdin_open: true
+    tty: true
 
   postgresql:
     image: postgres:16

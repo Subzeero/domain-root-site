@@ -8,7 +8,7 @@ async function run() {
   await db.init();
 
   const app = express();
-  app.use(cors({ origin: "http://localhost:3000" }));
+  app.use(cors({ origin: process.env.CORS_DOMAIN || "http://localhost:3000" }));
   app.use("/", routes);
 
   app.listen(4000);

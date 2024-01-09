@@ -12,7 +12,7 @@ import AboutSChat from "./about/AboutSChat";
 import NotFound404 from "./NotFound404";
 import "./App.css";
 
-axios.defaults.baseURL = "http://localhost:4000";
+axios.defaults.baseURL = process.env.BACKEND_DOMAIN || "http://localhost:4000";
 
 function App(): JSX.Element {
   return (
