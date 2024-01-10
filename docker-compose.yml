@@ -1,13 +1,15 @@
+# Ensure these placeholder credential values are replaced with
+# secure variants for deployment
+
 version: "3.9"
 services:
   node-back:
-    build:
-      context: .
-      dockerfile: backend/Dockerfile
+    build: .
     container_name: node-back
     ports:
       - 4000:4000
     environment:
+      - CONTAINER_TYPE=backend
       - CORS_DOMAIN=subzeero.dev
       - PGUSER=root
       - PGPASSWORD=root
@@ -18,13 +20,12 @@ services:
         condition: service_started
 
   node-front:
-    build:
-      context: .
-      dockerfile: frontend/Dockerfile
+    build: .
     container_name: node-front
     ports:
       - 3000:3000
     environment:
+      - CONTAINER_TYPE=frontend
       - BACKEND_DOMAIN=subzeero.dev
     depends_on:
       postgresql:

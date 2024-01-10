@@ -1,15 +1,14 @@
 version: "3.9"
 services:
   node-back:
-    build:
-      context: .
-      dockerfile: backend/Dockerfile
+    build: .
     container_name: node-back
     ports:
       - 4000:4000
     volumes:
-      - ./backend:/opt/mnt
+      - ./backend:/opt/backend/mnt
     environment:
+      - CONTAINER_TYPE=backend
       - DEV_MODE=true
       - PGUSER=root
       - PGPASSWORD=root
@@ -22,15 +21,14 @@ services:
     tty: true
 
   node-front:
-    build:
-      context: .
-      dockerfile: frontend/Dockerfile
+    build: .
     container_name: node-front
     ports:
       - 3000:3000
     volumes:
-      - ./frontend:/opt/mnt
+      - ./frontend:/opt/frontend/mnt
     environment:
+      - CONTAINER_TYPE=frontend
       - DEV_MODE=true
     depends_on:
       postgresql:
