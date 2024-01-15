@@ -12,8 +12,17 @@ function AboutMe(): JSX.Element {
         <hr />
       </span>
 
-      <div className="row">
-        <span className="col d-flex flex-column justify-content-center text-center">
+      <div className="row justify-content-center">
+        <span className="col-6">
+          <img
+            src={headshot}
+            alt="Headshot"
+            width="100%"
+            height="auto"
+            className="rounded"
+          ></img>
+        </span>
+        <span className="col-10 d-flex flex-column justify-content-center text-center mt-3">
           <h3>Hello!</h3>
           <h5 className="fw-normal">
             I'm Zander Rommelaere, a third year Computer Science student at{" "}
@@ -52,15 +61,6 @@ function AboutMe(): JSX.Element {
               <i className="fs-4 m-1 bi-discord"></i>
             </a>
           </div>
-        </span>
-        <span className="col">
-          <img
-            src={headshot}
-            alt="Headshot"
-            width="100%"
-            height="auto"
-            className="rounded"
-          ></img>
         </span>
       </div>
     </div>
