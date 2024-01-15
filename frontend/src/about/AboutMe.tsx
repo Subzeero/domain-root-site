@@ -13,14 +13,8 @@ function AboutMe(): JSX.Element {
       </span>
 
       <div className="row justify-content-center">
-        <span className="col-6">
-          <img
-            src={headshot}
-            alt="Headshot"
-            width="100%"
-            height="auto"
-            className="rounded"
-          ></img>
+        <span className="col-9 text-center">
+          <img src={headshot} alt="Headshot" className="rounded w-75"></img>
         </span>
         <span className="col-10 d-flex flex-column justify-content-center text-center mt-3">
           <h3>Hello!</h3>

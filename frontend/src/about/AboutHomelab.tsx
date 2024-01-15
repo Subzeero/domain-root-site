@@ -1,9 +1,18 @@
 function AboutHomelab(): JSX.Element {
   return (
-    <div className="col pt-4 vh-100">
-      <h3>Homelab & Hosting</h3>
-      <p>My text</p>
-      <hr />
+    <div
+      className="col vh-100 container pt-3 p-5 justify-content-center"
+      style={{ maxWidth: "1320px" }}
+    >
+      <span className="text-center">
+        <h2>Homelab & Hosting</h2>
+        <h5 className="text-dark text-opacity-75">
+          Virtualizing Environments and Hosting Home Services
+        </h5>
+        <hr />
+      </span>
+      <p>📝 In Progress.... Check back again later.</p>
+      <br />
     </div>
   );
 }
