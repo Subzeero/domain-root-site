@@ -1,5 +1,6 @@
 **/node_modules/
 **/dist
+/backend/db
 .git
 .DS_Store
 Dockerfile
