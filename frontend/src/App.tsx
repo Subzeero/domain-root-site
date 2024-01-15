@@ -12,8 +12,7 @@ import AboutSChat from "./about/AboutSChat";
 import NotFound404 from "./NotFound404";
 import "./App.css";
 
-axios.defaults.baseURL =
-  import.meta.env.BACKEND_DOMAIN || "http://localhost:4000";
+axios.defaults.baseURL = "https://subzeero.dev/api";
 
 function App(): JSX.Element {
   return (

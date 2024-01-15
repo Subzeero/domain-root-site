@@ -10,7 +10,6 @@ services:
       - 4000:4000
     environment:
       - CONTAINER_TYPE=backend
-      - CORS_DOMAIN=subzeero.dev
       - PGUSER=root
       - PGPASSWORD=root
       - PGHOST=postgresql
@@ -26,7 +25,6 @@ services:
       - 3000:3000
     environment:
       - CONTAINER_TYPE=frontend
-      - BACKEND_DOMAIN=subzeero.dev
     depends_on:
       postgresql:
         condition: service_started
