@@ -1,3 +1,7 @@
+# .gitignore - Files for Git to ignore
+# Subzeero (Zander Rommelaere)
+# January 16, 2024
+
 # Database files
 backend/db/
 

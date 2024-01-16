@@ -1,3 +1,7 @@
+// AboutPortfolio.tsx - React "Portfolio website" project element for "About" pages
+// Subzeero (Zander Rommelaere)
+// January 16, 2024
+
 import about_home from "../assets/about-home.jpeg";
 import about_desktop from "../assets/about-desktop.jpeg";
 import about_mobile from "../assets/about-mobile.jpeg";

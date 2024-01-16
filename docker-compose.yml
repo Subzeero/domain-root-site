@@ -1,3 +1,7 @@
+# docker-compose.yml - Docker compose specification for production environment
+# Subzeero (Zander Rommelaere)
+# January 16, 2024
+
 # Ensure these placeholder credential values are replaced with
 # secure variants for deployment
 

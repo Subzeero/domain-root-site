@@ -1,3 +1,7 @@
+# docker-compose-dev.yml - Docker compose specification for development environment
+# Subzeero (Zander Rommelaere)
+# January 16, 2024
+
 version: "3.9"
 services:
   node-back:

@@ -1,3 +1,7 @@
+// db.js - Node script to connect with PostgreSQL database using pg
+// Subzeero (Zander Rommelaere)
+// January 16, 2024
+
 const pg = require("pg");
 
 const Database = {

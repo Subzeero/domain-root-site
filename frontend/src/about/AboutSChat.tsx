@@ -1,3 +1,7 @@
+// AboutSChat.tsx - React "S-Chat" project element for "About" pages
+// Subzeero (Zander Rommelaere)
+// January 16, 2024
+
 import schat from "../assets/s-chat.jpeg";
 
 function AboutSChat(): JSX.Element {

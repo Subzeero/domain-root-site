@@ -1,3 +1,7 @@
+// deploy.js - Node script to serve frontend build with Express.js
+// Subzeero (Zander Rommelaere)
+// January 16, 2024
+
 import express from "express";
 import path from "path";
 const app = express();

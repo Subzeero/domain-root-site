@@ -1,3 +1,7 @@
+// App.tsx - React main App element; route to other elements
+// Subzeero (Zander Rommelaere)
+// January 16, 2024
+
 import { Route, Routes, Navigate } from "react-router-dom";
 import axios from "axios";
 

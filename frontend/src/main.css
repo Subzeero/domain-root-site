@@ -1,3 +1,8 @@
+/* main.css - Default CSS file for React root element
+ * Subzeero (Zander Rommelaere)
+ * January 16, 2024
+ */
+
 :root {
   font-family: "Open Sans", Inter, system-ui, Avenir, Helvetica, Arial,
     sans-serif;

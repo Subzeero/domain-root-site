@@ -1,3 +1,7 @@
+// server.js - Node script to serve backend API with Express.js
+// Subzeero (Zander Rommelaere)
+// January 16, 2024
+
 const express = require("express");
 const cors = require("cors");
 const { Database: db } = require("./db");

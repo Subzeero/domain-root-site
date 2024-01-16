@@ -1,3 +1,7 @@
+// AboutMe.tsx - React root element for "About" pages
+// Subzeero (Zander Rommelaere)
+// January 16, 2024
+
 import headshot from "../assets/full-shot.jpeg";
 
 function AboutMe(): JSX.Element {

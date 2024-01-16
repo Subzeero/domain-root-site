@@ -1,3 +1,7 @@
+// AboutVC.tsx - React "VolunteerConnect" project element for "About" pages
+// Subzeero (Zander Rommelaere)
+// January 16, 2024
+
 import vc_home from "../assets/vc-home.jpeg";
 import vc_data from "../assets/vc-data.jpeg";
 import vc_profile from "../assets/vc-profile.jpeg";

@@ -1,3 +1,7 @@
+// AboutHomelab.tsx - React "HomeLab" project element for "About" pages
+// Subzeero (Zander Rommelaere)
+// January 16, 2024
+
 function AboutHomelab(): JSX.Element {
   return (
     <div

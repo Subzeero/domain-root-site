@@ -1,3 +1,7 @@
+// controllers.js - Node script to define logic of backend API
+// Subzeero (Zander Rommelaere)
+// January 16, 2024
+
 const { Database: db } = require("./db");
 
 const root = (req, resp) => {

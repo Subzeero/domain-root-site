@@ -1,3 +1,7 @@
+# .dockerignore - Files for Docker images to ignore
+# Subzeero (Zander Rommelaere)
+# January 16, 2024
+
 **/node_modules/
 **/dist
 /backend/db

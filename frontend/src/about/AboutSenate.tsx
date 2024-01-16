@@ -1,3 +1,7 @@
+// AboutSenate.tsx - React "The Senate" project element for "About" pages
+// Subzeero (Zander Rommelaere)
+// January 16, 2024
+
 function AboutSenate(): JSX.Element {
   return (
     <div

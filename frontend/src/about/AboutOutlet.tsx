@@ -1,3 +1,7 @@
+// AboutOutlet.tsx - React Router DOM Outlet element to add nav bar to "About" pages
+// Subzeero (Zander Rommelaere)
+// January 16, 2024
+
 import { Outlet, Link, useLocation } from "react-router-dom";
 import closeupPhoto from "../assets/close-up.jpeg";
 

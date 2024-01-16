@@ -1,4 +1,7 @@
 #!/bin/bash
+# docker-setup.bash - Shell script for inital startup of Docker containers
+# Subzeero (Zander Rommelaere)
+# January 16, 2024
 
 echo "Beginning setup..."
 if [[ $DEV_MODE == true ]]; then

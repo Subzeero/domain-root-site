@@ -1,3 +1,7 @@
+# Dockerfile - Docker image specification for frontend & backend containers
+# Subzeero (Zander Rommelaere)
+# January 16, 2024
+
 FROM node
 EXPOSE 3000 4000
 

@@ -1,3 +1,7 @@
+// NotFound404.tsx - React element for any page not found
+// Subzeero (Zander Rommelaere)
+// January 16, 2024
+
 import Footer from "./Footer";
 
 function NotFound404(): JSX.Element {

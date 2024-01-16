@@ -1,3 +1,7 @@
+// Home.tsx - React element for landing page
+// Subzeero (Zander Rommelaere)
+// January 16, 2024
+
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Footer from "./Footer";
