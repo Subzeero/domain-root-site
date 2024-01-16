@@ -107,6 +107,14 @@ function AboutPortfolio(): JSX.Element {
           worked on instead of many of the open source applications I host.
         </li>
       </ul>
+      <div className="d-flex justify-content-center">
+        <a href="https://github.com/Subzeero/domain-root-site" target="_blank">
+          <button className="btn btn-dark">
+            <i className="fs-5 m-1 bi-github"></i>
+            View Source
+          </button>
+        </a>
+      </div>
       <br />
     </div>
   );
