@@ -106,12 +106,13 @@ function AboutVC(): JSX.Element {
         process were:
         <ul>
           <li>
-            Ensure everyone is on the same page about EVERYTHING. Our team often
-            faced issues simply because each had different ideas about some core
-            concept. Near our first deliverable, we each had distinct platforms
-            of code that did not work together. This was quite the challenge to
-            unify and could have easily been avoided had we made sure of each
-            member's intentions.
+            Ensure everyone is on the same page about EVERYTHING, especially the
+            requirements and design. Our team often faced issues simply because
+            each had different ideas about some core concept. Near our first
+            deliverable, we each had distinct platforms of code that did not
+            work together. This was quite the challenge to unify and could have
+            easily been avoided had we made sure each member's intentions
+            aligned with the project's requirements and design.
           </li>
           <li>
             Following from above, documentation is a very important task that
