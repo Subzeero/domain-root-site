@@ -3,10 +3,12 @@ import axios from "axios";
 import Footer from "./Footer";
 
 function Home(): JSX.Element {
-  const [count, setCount] = useState<{ since: string; count: string }>({
-    since: "00/00/0000, 00:00:00 AM",
-    count: "...",
-  });
+  const [count, setCount] = useState<{ since: number | string; count: string }>(
+    {
+      since: 0,
+      count: "...",
+    }
+  );
   const [loaded, setLoaded] = useState<boolean>(false);
 
   async function fetchData(): Promise<void> {
@@ -18,7 +20,7 @@ function Home(): JSX.Element {
         setCount(JSON.parse(resp.data));
       })
       .catch((err) => {
-        setCount({ since: "00/00/0000, 00:00:00 AM", count: "..." });
+        setCount({ since: 0, count: "..." });
         setLoaded(false);
         console.error(`Failed to reach backend count endpoint: ${err}`);
       });
@@ -29,8 +31,16 @@ function Home(): JSX.Element {
   }, []);
 
   return (
-    <div id="home">
-      <div id="home-text">
+    <div
+      className="d-flex align-items-center justify-content-center text-center m-0 p-0"
+      style={{
+        color: "rgba(255, 255, 255, 0.85)",
+        backgroundColor: "#1c1f23",
+        minWidth: "320px",
+        minHeight: "100vh",
+      }}
+    >
+      <div>
         <h2>
           <i className="bi bi-check-circle-fill text-success"></i> You have
           reached subzeero.dev!

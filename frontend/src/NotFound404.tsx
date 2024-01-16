@@ -2,7 +2,15 @@ import Footer from "./Footer";
 
 function NotFound404(): JSX.Element {
   return (
-    <div id="not-found">
+    <div
+      className="d-flex align-items-center justify-content-center text-center m-0 p-0"
+      style={{
+        color: "rgba(255, 255, 255, 0.85)",
+        backgroundColor: "#1c1f23",
+        minWidth: "320px",
+        minHeight: "100vh",
+      }}
+    >
       <div>
         <h2>
           <i className="bi bi-x-circle-fill text-danger"></i> 404: Not Found

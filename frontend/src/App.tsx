@@ -10,7 +10,6 @@ import AboutSenate from "./about/AboutSenate";
 import AboutHomelab from "./about/AboutHomelab";
 import AboutSChat from "./about/AboutSChat";
 import NotFound404 from "./NotFound404";
-import "./App.css";
 
 axios.defaults.baseURL = "https://subzeero.dev/api";
 
