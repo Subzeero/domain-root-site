@@ -30,6 +30,11 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Set shorten commit SHA
+        run: |
+          shortenedSha=$(git rev-parse --short ${{ github.sha }})
+          echo "COMMIT_SHORT_SHA=$shortenedSha" >> $GITHUB_ENV
+
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
@@ -38,8 +43,8 @@ jobs:
           push: true
           tags: |
             subzeero/domain-root-site:latest
-            subzeero/domain-root-site:$(git rev-parse --short "${{ github.sha }}")
+            subzeero/domain-root-site:${{ env.COMMIT_SHORT_SHA }})
             ghcr.io/subzeero/domain-root-site:latest
-            ghcr.io/subzeero/domain-root-site:$(git rev-parse --short "${{ github.sha }}")
+            ghcr.io/subzeero/domain-root-site:${{ env.COMMIT_SHORT_SHA }})
           cache-from: type=registry,ref=subzeero/domain-root-site:latest
           cache-to: type=inline
