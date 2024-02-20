@@ -38,8 +38,8 @@ jobs:
           push: true
           tags: |
             subzeero/domain-root-site:latest
-            subzeero/domain-root-site:$(git rev-parse --short "$GITHUB_SHA")
+            subzeero/domain-root-site:$(git rev-parse --short "${{ github.sha }}")
             ghcr.io/subzeero/domain-root-site:latest
-            ghcr.io/subzeero/domain-root-site:$(git rev-parse --short "$GITHUB_SHA")
+            ghcr.io/subzeero/domain-root-site:$(git rev-parse --short "${{ github.sha }}")
           cache-from: type=registry,ref=subzeero/domain-root-site:latest
           cache-to: type=inline
