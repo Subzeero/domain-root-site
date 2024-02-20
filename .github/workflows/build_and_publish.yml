@@ -43,8 +43,8 @@ jobs:
           push: true
           tags: |
             subzeero/domain-root-site:latest
-            subzeero/domain-root-site:${{ env.COMMIT_SHORT_SHA }})
+            subzeero/domain-root-site:${{ env.COMMIT_SHORT_SHA }}
             ghcr.io/subzeero/domain-root-site:latest
-            ghcr.io/subzeero/domain-root-site:${{ env.COMMIT_SHORT_SHA }})
+            ghcr.io/subzeero/domain-root-site:${{ env.COMMIT_SHORT_SHA }}
           cache-from: type=registry,ref=subzeero/domain-root-site:latest
           cache-to: type=inline
